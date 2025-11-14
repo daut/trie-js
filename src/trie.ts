@@ -18,10 +18,8 @@ class Trie {
         let level = 0;
 
         for (const char of word) {
-            let node;
-            if (children.get(char)) {
-                node = children.get(char);
-            } else {
+            let node = children.get(char);
+            if (!node) {
                 node = new TrieNode(char);
                 children.set(char, node);
             }
@@ -54,16 +52,17 @@ class Trie {
      * Get a node from the Trie.
      *
      * @param {string} word
-     * @returns {TrieNode}
+     * @returns {TrieNode | null}
      * @memberof Trie
      */
-    public getNode(word: string): TrieNode {
-        let node = null;
+    public getNode(word: string): TrieNode | null {
+        let node: TrieNode | null = null;
         let currentNode = this.root.children;
 
         for (const char of word) {
-            if (currentNode.get(char)) {
-                node = currentNode.get(char);
+            const foundNode = currentNode.get(char);
+            if (foundNode) {
+                node = foundNode;
                 currentNode = node.children;
             } else {
                 return null;

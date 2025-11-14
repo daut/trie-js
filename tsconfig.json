@@ -2,12 +2,12 @@
     "compileOnSave": true,
     "compilerOptions": {
         "module": "commonjs",
-        "noImplicitAny": true,
+        "strict": true,
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true,
         "outDir": "build",
-        "target": "es6",
+        "target": "es2020",
         "typeRoots": [
             "node_modules/@types"
         ]

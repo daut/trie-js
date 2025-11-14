@@ -1,6 +1,6 @@
 class TrieNode {
     public isLeaf: boolean;
-    public character: string;
+    public character: string | undefined;
     public children: Map<string, TrieNode>;
 
     constructor(key?: string) {

@@ -12,14 +12,12 @@
   ],
   "devDependencies": {
     "@types/mocha": "^2.2.41",
+    "@types/node": "^24.10.1",
     "eslint": "4.1.1",
     "eslint-config-vast": "1.7.1",
     "mocha": "3.4.2",
     "pre-commit": "1.2.2",
     "tslint": "5.1.0",
-    "typescript": "2.2.2"
-  },
-  "dependencies": {
-    "@types/node": "8.0.14"
+    "typescript": "^5.9.3"
   }
 }
