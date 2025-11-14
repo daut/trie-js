@@ -5,19 +5,20 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "test": "mocha build/tests",
-    "lint:ts": "tslint -c tslint.json 'src/**/*.ts'"
+    "lint": "eslint src/**/*.ts tests/**/*.ts"
   },
   "pre-commit": [
-    "lint:ts"
+    "lint"
   ],
   "devDependencies": {
     "@types/mocha": "^2.2.41",
     "@types/node": "^24.10.1",
-    "eslint": "4.1.1",
-    "eslint-config-vast": "1.7.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
     "mocha": "3.4.2",
     "pre-commit": "1.2.2",
-    "tslint": "5.1.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
   }
 }
