@@ -6,16 +6,31 @@ Trie data structure implementation in TypeScript.
 
 ### Create new Trie
 ```typescript
-const Trie = require('trie');
-...
+import { Trie } from 'trie-js';
+
 const trie = new Trie();
 ```
 
 ### Insert element
-`trie.insert('Tree');`
+```typescript
+trie.insert('Tree');
+```
 
 ### Search for an element
-`trie.search('Tree');`
+```typescript
+trie.search('Tree'); // Returns: true
+```
+
+### Check if prefix exists
+```typescript
+trie.startsWith('Tr'); // Returns: true
+trie.startsWith('Xyz'); // Returns: false
+```
+
+### Get node by word/prefix
+```typescript
+const node = trie.getNode('Tre'); // Returns: TrieNode | null
+```
 
 ## Build
 
