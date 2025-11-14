@@ -11,6 +11,7 @@
     "lint:ts"
   ],
   "devDependencies": {
+    "@types/mocha": "^2.2.41",
     "eslint": "4.1.1",
     "eslint-config-vast": "1.7.1",
     "mocha": "3.4.2",
